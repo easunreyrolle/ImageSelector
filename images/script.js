@@ -5,7 +5,7 @@ const housePlans = [
     Length: "20",
     Width: "30",
     Type: "Single",
-    Steps: "Required",
+    Steps: "Not Required",
     image: "images/N_30x20.jpg"
 },
 
