@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html>
-
+<head>
+    <title>House Plan Design</title>
+</head>
 <body>
 
-<h2>My Image</h2>
+<h2>House Plan Design</h2>
 
-<img src="images/N_30x20.jpg" width="500">
+<h4>Facing Direction:
+<select id="Facing Direction">
+    <option value="">Select</option>
+    <option>East</option>
+    <option>West</option>
+  <option>North</option>
+  <option>South</option>
+</select></h4>
+
+<h4>Length:
+<select id="Length (feet)">
+    <option value="">Select</option>
+    <option>10</option>
+    <option>20</option>
+  <option>30</option>
+  <option>40</option>
+  <option>50</option>
+</select></h4>
+ <h4> Width:
+<select id="Width (feet)">
+    <option value="">Select</option>
+    <option>10</option>
+    <option>20</option>
+  <option>30</option>
+  <option>40</option>
+  <option>50</option>
+</select></h4>
+
+<h4>Type:
+<select id="Type">
+    <option value="">Select</option>
+    <option>Single</option>
+    <option>Duplex</option>
+</select></h4>
+  <h4>Steps:
+<select id="Type">
+    <option value="">Select</option>
+    <option>Required</option>
+    <option>Not Required</option>
+</select></h4>
+
+<br><br>
+
+<button onclick="showImage()">Search</button>
+
+<br><br>
+
+<img id="result" width="400">
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
