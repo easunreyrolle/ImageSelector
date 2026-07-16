@@ -1,7 +1,7 @@
 const housePlans = [
 
 {
-    FacingDirection: "East",
+    FacingDirection: "North",
     Length: "20",
     Width: "30",
     Type: "Single",
