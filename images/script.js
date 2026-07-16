@@ -1,40 +1,62 @@
-const images = [
+const housePlans = [
 
 {
-FacingDirection:"North",
-Length:"20",
-Width:"30",
-Type:"Single",
-Steps:"Not Required",
-file:"images/N_30x20.jpg"
+    FacingDirection: "East",
+    Length: "20",
+    Width: "30",
+    Type: "Single",
+    Steps: "Required",
+    image: "images/east_20_30_single_steps.jpg"
 },
+
+{
+    FacingDirection: "West",
+    Length: "30",
+    Width: "40",
+    Type: "Duplex",
+    Steps: "Not Required",
+    image: "images/west_30_40_duplex.jpg"
+},
+
+{
+    FacingDirection: "North",
+    Length: "40",
+    Width: "30",
+    Type: "Single",
+    Steps: "Required",
+    image: "images/north_40_30_single.jpg"
+}
 
 ];
 
-function showImage(){
+function showImage() {
 
-let type=document.getElementById("FacingDirection").value;
-let cap=document.getElementById("Length").value;
-let mat=document.getElementById("Width").value;
-let mat=document.getElementById("Type").value;
-let mat=document.getElementById("Steps").value;
+    let direction = document.getElementById("FacingDirection").value;
+    let length = document.getElementById("Length").value;
+    let width = document.getElementById("Width").value;
+    let type = document.getElementById("Type").value;
+    let steps = document.getElementById("Steps").value;
 
-let found=images.find(x=>
+    let plan = housePlans.find(item =>
 
-x.FacingDirection==fd &&
-x.Length==Ln &&
-x.Width==wt &&
-x.type==typ &&
-x.Steps==ste
+        item.FacingDirection === direction &&
+        item.Length === length &&
+        item.Width === width &&
+        item.Type === type &&
+        item.Steps === steps
 
-);
+    );
 
-if(found){
-document.getElementById("result").src=found.file;
-}
-else{
-alert("No matching image found");
-document.getElementById("result").src="";
-}
+    if(plan){
+
+        document.getElementById("result").src = plan.image;
+
+    }
+    else{
+
+        alert("No matching house plan found.");
+        document.getElementById("result").src = "";
+
+    }
 
 }
