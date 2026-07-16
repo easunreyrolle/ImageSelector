@@ -37,7 +37,7 @@ function showImage() {
     let type = document.getElementById("Type").value;
     let steps = document.getElementById("Steps").value;
 
-    alert(direction + " " + length + " " + width + " " + type + " " + steps);
+    alert("Script Loaded Successfully");
 
 }
 
